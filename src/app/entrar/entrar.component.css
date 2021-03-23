@@ -1,9 +1,18 @@
 #img-bg{
     background-image: url(../../assets/img/36881234-social-network-background-with-media-icons.jpg);
 
-    min-height: 695px;
+    min-height: 658px;
 
     background-position: center;
     background-repeat: repeat;
     /* background-size: cover; */
+}
+.mb{
+    margin-bottom: 65px;
+}
+
+@media (max-width: 762px){
+    #img-bg{
+       display: none !important;
+    }
 }

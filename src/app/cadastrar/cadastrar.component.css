@@ -7,3 +7,9 @@
     background-repeat: repeat;
     /* background-size: cover; */
 }
+
+@media (max-width: 762px){
+    #img-bg{
+       display: none !important;
+    }
+}
