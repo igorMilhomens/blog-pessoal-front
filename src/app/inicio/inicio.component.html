@@ -1,13 +1,15 @@
 <div class="container-fluid">
 
-  <div class="row bg-secondary d-flex align-items-center">
+  <div class="row bg-inicio d-flex align-items-center">
     <div class="col-md-6">
 
       <div class="row d-flex justify-content-center">
         <div class="col-md-6 text-white">
 
-          <h1 class="fs-54">Seja bem vindo(a)!</h1>
-          <h5 class="fs-18">expresse aqui os seus pensamentos e opniões!</h5>
+          <h1 class="fs-54 text-center">Seja bem vindo(a)!</h1>
+          <h5 class="fs-18 text-center">expresse aqui os seus</h5>
+          <h5 class="fs-18 text-center">pensamentos e opniões com o</h5>
+          <h5 class="fs-18 text-center">MUNDO!</h5>
 
         </div>
       </div>
@@ -26,6 +28,10 @@
     </div>
 
     <div class="col-md-6 ">
+
+
+
+      <!-- <img src="https://media.giphy.com/media/iFaPIqooUgZ2MkVNJI/giphy.gif" alt=""> -->
 
       <img src="../../assets/img/inicio2.png" alt="" width="500px" height="500px">
 
@@ -92,7 +98,7 @@
           <label for="titulo">Texto</label>
           <textarea class="form-control" name="texto" id="texto" rows="3" ></textarea>
 
-          <label for="titulo">Escolha um tema, ou <a href="">cadastre um novo</a></label>
+          <label for="titulo">Escolha um tema, ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a></label>
           <select class="form-control" name="tema" id="tema">
             <option value="">Temas</option>
           </select>
