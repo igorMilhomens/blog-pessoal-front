@@ -12,12 +12,14 @@ export class AuthService {
 
   constructor( private http: HttpClient ) { }
 
+  baseUrl = environment.server + environment.port
+
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+    return this.http.post<UserLogin>(`${this.baseUrl}/usuarios/logar`, userLogin)
   }
 
   cadastrar( user: User ): Observable<User>{
-    return this.http.post<User>('http://localhost:8080/usuarios/cadastrar', user)
+    return this.http.post<User>(`${this.baseUrl}/usuarios/cadastrar`, user)
   }
 
   logado(){
