@@ -4,6 +4,6 @@ export const environment = {
   nome: '',
   id: 0,
   foto: '',
-  server: 'http://localhost',
-  port: ':8080'
+  server: 'http://localhost:',
+  port: '8080'
 };
