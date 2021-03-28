@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -10,7 +10,7 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  constructor( private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
@@ -19,6 +19,11 @@ export class AuthService {
 
   cadastrar( user: User ): Observable<User>{
     return this.http.post<User>(`${environment.server}${environment.port}/usuarios/cadastrar`, user)
+  }
+
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`${environment.server}${environment.port}/usuarios/${id}`, {headers: {'Authorization': environment.token}})
+
   }
 
   logado(){
