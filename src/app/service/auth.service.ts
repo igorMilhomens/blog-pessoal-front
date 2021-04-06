@@ -17,8 +17,13 @@ export class AuthService {
     return this.http.post<UserLogin>(`${environment.server}${environment.port}/usuarios/logar`, userLogin)
   }
 
-  cadastrar( user: User ): Observable<User>{
+  cadastrar(user: User ): Observable<User>{
     return this.http.post<User>(`${environment.server}${environment.port}/usuarios/cadastrar`, user)
+  }
+
+  atualizar(user: User): Observable<User>{
+    return this.http.put<User>(`${environment.server}${environment.port}/usuarios/atualizar`,user) //,{headers: {'Authorization': environment.token}})
+
   }
 
   getByIdUser(id: number): Observable<User>{

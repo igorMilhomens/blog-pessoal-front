@@ -5,3 +5,7 @@
 .fs-18{
   font-size: 18pt;
 }
+
+.bg-fundo{
+  background: linear-gradient(135deg,#05235f,#000103);
+}
